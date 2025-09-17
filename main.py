@@ -1,9 +1,8 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, request, render_template, redirect
 
-app = Flask(__name__)
+app = Flask(__name__);
 
-# Postlarni xotirada saqlaymiz (dastur yopilsa o'chadi)
-posts = []
+posts = []; 
 
 @app.route("/")
 def home():
@@ -18,5 +17,20 @@ def add_post():
         return redirect("/")
     return render_template("add_post.html")
 
-if __name__ == "__main__":
+if __name__ =="__main__":
     app.run(debug=True)
+    
+     
+# Post ---- yangi malumotni qoyish
+# Get ---- Olish Bor malumotni oldi
+# Update ---- Bor malumotni yangilash
+# Delete ---- Bor malumotni ochirish
+# Put ---- Rest Api
+
+
+# List
+# Method
+# append
+# remove
+
+# Authentication
